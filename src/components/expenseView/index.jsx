@@ -43,7 +43,9 @@ export default function ExpenseView({ type, data }) {
           </Flex>
           {/* Format numbers with commas */}
           <Text fontWeight="bold" color={isExpense ? "red.600" : "blue.600"}>
-            ₦ {item.amount.toLocaleString()}
+          ₦ {Number(item.amount).toLocaleString("en-NG")}
+
+
           </Text>
         </Flex>
       ))}

@@ -33,8 +33,10 @@ export default function Summary({
                     justifyContent="space-evenly"
                     mr="2"
                 >
-                    <Heading size="md" mb="4" color="gray.600">
-                        Balance is ₦ {totalIncome - totalExpense}
+                    <Heading size={"md"} mb={"4"} color={"gray.600"}>
+                        <Text as="span" userSelect="all">
+                            Balance is ₦ {(totalIncome - totalExpense).toLocaleString()}
+                        </Text>
                     </Heading>
                     <Flex
                         justifyContent="space-evenly"
