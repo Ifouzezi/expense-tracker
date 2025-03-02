@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider} from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import GlobalState from './context';
 import theme from './theme';
+import { HashRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GlobalState>
     <ChakraProvider theme={theme}>
-      <App />
+      <HashRouter>
+        <App />
+      </HashRouter>
     </ChakraProvider>
   </GlobalState>
 
