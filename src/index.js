@@ -6,18 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import GlobalState from './context';
 import theme from './theme';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GlobalState>
-    <ChakraProvider theme={theme}>
-      <HashRouter>
+
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <GlobalState>
+      <ChakraProvider theme={theme}>
         <App />
-      </HashRouter>
-    </ChakraProvider>
-  </GlobalState>
+      </ChakraProvider>
+    </GlobalState>
+  </BrowserRouter>
 
 );
 
